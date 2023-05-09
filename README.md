@@ -24,4 +24,5 @@
 +--------+---------+--------+------+-------------------+------+
 ```
 #### Solution :- 
-[Scala-Spark](https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/master/src/pack/Scenerio1.scala) - <https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/master/src/pack/Scenerio1.scala>
+[Scala-Spark](https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/master/src/pack/Scenerio1.scala) - <https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/master/src/pack/Scenerio1.scala> <br>
+[PySpark](https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/master/Scenerio-1.py) - <https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/master/Scenerio-1.py>
