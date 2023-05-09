@@ -26,3 +26,34 @@
 #### Solution :- 
 [Scala-Spark](https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/master/src/pack/Scenerio1.scala) - <https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/master/src/pack/Scenerio1.scala> <br>
 [PySpark](https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/master/Scenerio-1.py) - <https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/master/Scenerio-1.py>
+
+### Scenerio-2 (Need the dates when the status gets changed like ordered to dispatched)
+#### Input :- 
+```
++-------+----------+----------+
+|orderid|statusdate|    status|
++-------+----------+----------+
+|      1|     1-Jan|   Ordered|
+|      1|     2-Jan|dispatched|
+|      1|     3-Jan|dispatched|
+|      1|     4-Jan|   Shipped|
+|      1|     5-Jan|   Shipped|
+|      1|     6-Jan| Delivered|
+|      2|     1-Jan|   Ordered|
+|      2|     2-Jan|dispatched|
+|      2|     3-Jan|   shipped|
++-------+----------+----------+
+```
+#### Expected Output :- 
+```
++-------+----------+----------+
+|orderid|statusdate|    status|
++-------+----------+----------+
+|      1|     2-Jan|dispatched|
+|      1|     3-Jan|dispatched|
+|      2|     2-Jan|dispatched|
++-------+----------+----------+
+```
+#### Solution :- 
+Scala-Spark - <https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/master/src/pack/Scenerio2.scala> <br>
+PySpark - <https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/master/Scenerio2.py>
