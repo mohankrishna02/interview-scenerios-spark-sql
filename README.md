@@ -86,3 +86,31 @@ PySpark - <https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio3.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio3.py>
+
+### Scenerio-4 (Write a query to list the unique customer names in the custtab table, along with the number of addresses associated with each customer.)
+#### Input :- 
+```
++------+-----------+-------+
+|custid|   custname|address|
++------+-----------+-------+
+|     1|   Mark Ray|     AB|
+|     2|Peter Smith|     CD|
+|     1|   Mark Ray|     EF|
+|     2|Peter Smith|     GH|
+|     2|Peter Smith|     CD|
+|     3|       Kate|     IJ|
++------+-----------+-------+
+```
+#### Expected Output :- 
+```
++------+-----------+--------+
+|custid|   custname| address|
++------+-----------+--------+
+|     1|   Mark Ray|[EF, AB]|
+|     2|Peter Smith|[CD, GH]|
+|     3|       Kate|    [IJ]|
++------+-----------+--------+
+```
+#### Solution :- 
+Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio4.scala> <br>
+PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio4.py>
