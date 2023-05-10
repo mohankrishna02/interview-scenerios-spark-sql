@@ -57,3 +57,32 @@ PySpark - <https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/master/src/pack/Scenerio2.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/master/Scenerio2.py>
+
+### Scenerio-3 
+#### Input :- 
+```
++--------+----------+------+
+|sensorid| timestamp|values|
++--------+----------+------+
+|    1111|2021-01-15|    10|
+|    1111|2021-01-16|    15|
+|    1111|2021-01-17|    30|
+|    1112|2021-01-15|    10|
+|    1112|2021-01-15|    20|
+|    1112|2021-01-15|    30|
++--------+----------+------+
+```
+#### Expected Output :- 
+```
++--------+----------+------+
+|sensorid| timestamp|values|
++--------+----------+------+
+|    1111|2021-01-15|     5|
+|    1111|2021-01-16|    15|
+|    1112|2021-01-15|    10|
+|    1112|2021-01-15|    10|
++--------+----------+------+
+```
+#### Solution :- 
+Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio3.scala> <br>
+PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio3.py>
