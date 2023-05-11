@@ -4,7 +4,7 @@ from pyspark.sql.types import *
 from pyspark.sql.functions import *
 from pyspark.sql.window import *
 
-conf = SparkConf().setMaster("local[*]").setAppName("Scenerio-3")
+conf = SparkConf().setMaster("local[*]").setAppName("Scenerio-5")
 sc = SparkContext(conf=conf)
 sc.setLogLevel("ERROR")
 spark = SparkSession.builder.getOrCreate()
@@ -44,3 +44,7 @@ df4.show()
 # Remove records which have invalid email from df4, emails with @ are considered to be valid.
 rmdf = df4.filter(col("email").rlike("@"))
 rmdf.show()
+
+#Write df4 to a target location, by partitioning on salary.
+rmdf.write.format("parquet").partitionBy("salary").save("D:/BigData/Processed Datasets/interdata")
+
