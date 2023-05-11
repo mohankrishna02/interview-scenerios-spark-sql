@@ -7,7 +7,7 @@ import org.apache.spark.sql.functions._
 import org.apache.spark.sql.expressions._
 object Scenerio5 {
   def main(args: Array[String]): Unit = {
-    val conf = new SparkConf().setMaster("local").setAppName("test")
+    val conf = new SparkConf().setMaster("local").setAppName("scenerio-5")
     val sc = new SparkContext(conf)
     sc.setLogLevel("ERROR")
     val spark = SparkSession.builder().getOrCreate()
@@ -44,6 +44,10 @@ object Scenerio5 {
     //Remove records which have invalid email from df4, emails with @ are considered to be valid.
     val rmdf = df4.filter(col("email").rlike("@"))
     rmdf.show()
+    
+    //Write df4 to a target location, by partitioning on salary.
+    rmdf.write.format("parquet").partitionBy("salary").save("D:/BigData/Processed Datasets/interdata")
+
 
   }
 }
