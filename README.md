@@ -121,6 +121,7 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 * Create a new dataframe df3 from df1, along with a new column salary, and keep it constant 1000
 * append df2 and df3, and form df4
 * Remove records which have invalid email from df4, emails with @ are considered to be valid.
+* Write df4 to a target location, by partitioning on salary.
 #### Input :- 
 ```
 +---+----+---+-------------+
