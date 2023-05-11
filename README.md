@@ -114,3 +114,49 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio4.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio4.py>
+
+### Scenerio-4 
+* Read data from above file into dataframes(df1 and df2).
+* Display number of partitions in df1.
+* Create a new dataframe df3 from df1, along with a new column salary, and keep it constant 1000
+* append df2 and df3, and form df4
+* Remove records which have invalid email from df4, emails with @ are considered to be valid.
+#### Input :- 
+```
++---+----+---+-------------+
+| id|name|age|        email|
++---+----+---+-------------+
+|  1| abc| 31|abc@gmail.com|
+|  2| def| 23| defyahoo.com|
+|  3| xyz| 26|xyz@gmail.com|
+|  4| qwe| 34| qwegmail.com|
+|  5| iop| 24|iop@gmail.com|
++---+----+---+-------------+
+```
+```
++---+----+---+---------------+------+
+| id|name|age|          email|salary|
++---+----+---+---------------+------+
+| 11| jkl| 22|  abc@gmail.com|  1000|
+| 12| vbn| 33|  vbn@yahoo.com|  3000|
+| 13| wer| 27|            wer|  2000|
+| 14| zxc| 30|        zxc.com|  2000|
+| 15| lkj| 29|lkj@outlook.com|  2000|
++---+----+---+---------------+------+
+```
+#### Expected Output :- 
+```
++---+----+---+---------------+------+
+| id|name|age|          email|salary|
++---+----+---+---------------+------+
+|  1| abc| 31|  abc@gmail.com|  1000|
+|  3| xyz| 26|  xyz@gmail.com|  1000|
+|  5| iop| 24|  iop@gmail.com|  1000|
+| 11| jkl| 22|  abc@gmail.com|  1000|
+| 12| vbn| 33|  vbn@yahoo.com|  3000|
+| 15| lkj| 29|lkj@outlook.com|  2000|
++---+----+---+---------------+------+
+```
+#### Solution :- 
+Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio5.scala> <br>
+PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio5.py>
