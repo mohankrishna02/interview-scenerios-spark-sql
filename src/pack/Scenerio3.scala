@@ -7,7 +7,7 @@ import org.apache.spark.sql.functions._
 import org.apache.spark.sql.expressions._
 object Scenerio3 {
   def main(args: Array[String]): Unit = {
-    val conf = new SparkConf().setMaster("local").setAppName("test")
+    val conf = new SparkConf().setMaster("local").setAppName("scenerio-3")
     val sc = new SparkContext(conf)
     sc.setLogLevel("ERROR")
     val spark = SparkSession.builder().getOrCreate()
