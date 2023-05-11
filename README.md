@@ -115,7 +115,7 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio4.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio4.py>
 
-### Scenerio-4 
+### Scenerio-5 
 * Read data from above file into dataframes(df1 and df2).
 * Display number of partitions in df1.
 * Create a new dataframe df3 from df1, along with a new column salary, and keep it constant 1000
@@ -161,3 +161,34 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio5.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio5.py>
+
+### Scenerio-6 (For Employee salary greater than 10000 give designation as manager else employee)
+#### Input :-
+```
++-----+----+------+
+|empid|name|salary|
++-----+----+------+
+|    1|   a| 10000|
+|    2|   b|  5000|
+|    3|   c| 15000|
+|    4|   d| 25000|
+|    5|   e| 50000|
+|    6|   f|  7000|
++-----+----+------+
+```
+#### Expected Output :- 
+```
++-----+----+------+-----------+
+|empid|name|salary|Designation|
++-----+----+------+-----------+
+|    1|   a| 10000|   Employee|
+|    2|   b|  5000|   Employee|
+|    3|   c| 15000|    Manager|
+|    4|   d| 25000|    Manager|
+|    5|   e| 50000|    Manager|
+|    6|   f|  7000|   Employee|
++-----+----+------+-----------+
+```
+#### Solution :- 
+Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio6.scala> <br>
+PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio6.py>
