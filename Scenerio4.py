@@ -4,7 +4,7 @@ from pyspark.sql.types import *
 from pyspark.sql.functions import *
 from pyspark.sql.window import *
 
-conf = SparkConf().setMaster("local[*]").setAppName("Scenerio-3")
+conf = SparkConf().setMaster("local[*]").setAppName("Scenerio-4")
 sc = SparkContext(conf=conf)
 sc.setLogLevel("ERROR")
 spark = SparkSession.builder.getOrCreate()
