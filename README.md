@@ -224,3 +224,27 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio7.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio7.py>
+
+### Scenerio-8
+#### Input :- 
+```
++--------+
+|   teams|
++--------+
+|   India|
+|Pakistan|
+|SriLanka|
++--------+
+```
+#### Expected Output :- 
+```
++--------------------+
+|             matches|
++--------------------+
+|   India Vs Pakistan|
+|   India Vs SriLanka|
+|Pakistan Vs SriLanka|
++--------------------+
+```
+Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio8.scala> <br>
+PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio8.py>
