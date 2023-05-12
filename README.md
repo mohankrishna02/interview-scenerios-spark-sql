@@ -246,5 +246,26 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 |Pakistan Vs SriLanka|
 +--------------------+
 ```
+#### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio8.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio8.py>
+
+### Scenerio-9 (write spark code, list of name of participants who has rank=1 most number of times)
+#### Input :- 
+```
++----+---------------+
+|name|           rank|
++----+---------------+
+|   a|   [1, 1, 1, 3]|
+|   b|   [1, 2, 3, 4]|
+|   c|[1, 1, 1, 1, 4]|
+|   d|            [3]|
++----+---------------+
+```
+#### Expected Output :- 
+```
+c
+```
+#### Solution :- 
+Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio9.scala> <br>
+PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio9.py>
