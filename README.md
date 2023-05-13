@@ -269,3 +269,29 @@ c
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio9.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio9.py>
+
+### Scenerio-10
+#### Input :- 
+```
++-----+-------------+-------------+
+|empid|commissionamt|monthlastdate|
++-----+-------------+-------------+
+|    1|          300|  31-Jan-2021|
+|    1|          400|  28-Feb-2021|
+|    1|          200|  31-Mar-2021|
+|    2|         1000|  31-Oct-2021|
+|    2|          900|  31-Dec-2021|
++-----+-------------+-------------+
+```
+#### Expected Output :- 
+```
++-----+-------------+-------------+
+|empid|commissionamt|monthlastdate|
++-----+-------------+-------------+
+|    1|          200|  31-Mar-2021|
+|    2|         1000|  31-Oct-2021|
++-----+-------------+-------------+
+```
+#### Solution :- 
+Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio10.scala> <br>
+PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio10.py>
