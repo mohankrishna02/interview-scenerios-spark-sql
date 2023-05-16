@@ -295,3 +295,36 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio10.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio10.py>
+
+### Scenerio-11 (I have a table called Emp_table, it has 3 columns, Emp name, emp ID , salary
+in this I want to get salaries that are >10000 as Grade A, 5000-10000 as grade B and < 5000 as
+Grade C, write an SQL query)
+#### Input :- 
+```
++------+---------------+------+
+|emp_id|       emp_name|salary|
++------+---------------+------+
+|     1|           Jhon|  4000|
+|     2|      Tim David| 12000|
+|     3|Json Bhrendroff|  7000|
+|     4|         Jordon|  8000|
+|     5|          Green| 14000|
+|     6|         Brewis|  6000|
++------+---------------+------+
+```
+#### Expected Output :- 
+```
++------+---------------+------+-----+
+|emp_id|       emp_name|salary|grade|
++------+---------------+------+-----+
+|     1|           Jhon|  4000|    C|
+|     2|      Tim David| 12000|    A|
+|     3|Json Bhrendroff|  7000|    B|
+|     4|         Jordon|  8000|    B|
+|     5|          Green| 14000|    A|
+|     6|         Brewis|  6000|    B|
++------+---------------+------+-----+
+```
+#### Solution :- 
+Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio11.scala> <br>
+PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio11.py>
