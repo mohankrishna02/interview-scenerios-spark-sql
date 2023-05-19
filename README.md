@@ -328,3 +328,26 @@ Grade C, write an SQL query)
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio11.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio11.py>
+
+### Scenerio-11
+#### Input :- 
+```
++--------------------+----------+
+|               email|    mobile|
++--------------------+----------+
+|Renuka1992@gmail.com|9856765434|
+|anbu.arasu@gmail.com|9844567788|
++--------------------+----------+
+```
+#### Expected Output :- 
+```
++--------------------+----------+
+|               email|    mobile|
++--------------------+----------+
+|R**********92@gma...|98*****434|
+|a**********su@gma...|98*****788|
++--------------------+----------+
+```
+#### Solution :- 
+Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio12.scala> <br>
+PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio12.py>
