@@ -329,7 +329,7 @@ Grade C, write an SQL query)
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio11.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio11.py>
 
-### Scenerio-11
+### Scenerio-12
 #### Input :- 
 ```
 +--------------------+----------+
@@ -351,3 +351,34 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio12.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio12.py>
+
+## Scenerio-13 (We have employee id,employee name, department. Need count of every department employees.)
+#### Input :- 
+```
++------+--------+-----------+
+|emp_id|emp_name|       dept|
++------+--------+-----------+
+|     1|    Jhon|Development|
+|     2|     Tim|Development|
+|     3|   David|    Testing|
+|     4|     Sam|    Testing|
+|     5|   Green|    Testing|
+|     6|  Miller| Production|
+|     7|  Brevis| Production|
+|     8|  Warner| Production|
+|     9|    Salt| Production|
++------+--------+-----------+
+```
+#### Expected Output :- 
+```
++-----------+-----+
+|       dept|total|
++-----------+-----+
+|Development|    2|
+|    Testing|    3|
+| Production|    4|
++-----------+-----+
+```
+#### Solution :- 
+Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio13.scala> <br>
+PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio13.py>
