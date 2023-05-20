@@ -382,3 +382,24 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio13.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio13.py>
+
+## Scenerio-14 (We need total marks)
+#### Input :- 
+```
++------+------+------+-------+-----+-------+------+
+|rollno|  name|telugu|english|maths|science|social|
++------+------+------+-------+-----+-------+------+
+|203040|rajesh|    10|     20|   30|     40|    50|
++------+------+------+-------+-----+-------+------+
+```
+#### Expected Output :- 
+```
++------+------+------+-------+-----+-------+------+-----+
+|rollno|  name|telugu|english|maths|science|social|total|
++------+------+------+-------+-----+-------+------+-----+
+|203040|rajesh|    10|     20|   30|     40|    50|  150|
++------+------+------+-------+-----+-------+------+-----+
+```
+#### Solution :- 
+Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio14.scala> <br>
+PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio14.py>
