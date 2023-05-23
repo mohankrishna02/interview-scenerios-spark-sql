@@ -409,3 +409,29 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio15.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio15.py>
+
+## Scenerio-16 (Remove duplicates)
+#### Input :- 
+```
++---+----+-----------+------+
+| id|name|       dept|salary|
++---+----+-----------+------+
+|  1|Jhon|    Testing|  5000|
+|  2| Tim|Development|  6000|
+|  3|Jhon|Development|  5000|
+|  4| Sky| Prodcution|  8000|
++---+----+-----------+------+
+```
+#### Expected Output :- 
+```
++---+----+-----------+------+
+| id|name|       dept|salary|
++---+----+-----------+------+
+|  1|Jhon|    Testing|  5000|
+|  2| Tim|Development|  6000|
+|  4| Sky| Prodcution|  8000|
++---+----+-----------+------+
+```
+#### Solution :- 
+Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio16.scala> <br>
+PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio16.py>
