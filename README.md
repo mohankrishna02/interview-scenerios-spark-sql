@@ -435,3 +435,34 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio16.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio16.py>
+
+## Scenerio-17 (df1 contains Employeeid,Name,Age,State,Country columns df2 contains Employeeid,Name,Age,Address columns. how do you merge df1 and df2 to get the following output Employeeid,Name,Age,State,Country,Address)
+#### Input :- 
+```
++------+-----+---+------+-------+          
+|emp_id| name|age| state|country|
++------+-----+---+------+-------+
+|     1|  Tim| 24|Kerala|  India|
+|     2|Asman| 26|Kerala|  India|
++------+-----+---+------+-------+
+```
+```
++------+-----+---+-------+
+|emp_id| name|age|address|
++------+-----+---+-------+
+|     1|  Tim| 24|Comcity|
+|     2|Asman| 26|bimcity|
++------+-----+---+-------+
+```
+#### Expected Output :- 
+```
++------+-----+---+------+-------+-------+
+|emp_id| name|age| state|country|address|
++------+-----+---+------+-------+-------+
+|     1|  Tim| 24|Kerala|  India|Comcity|
+|     2|Asman| 26|Kerala|  India|bimcity|
++------+-----+---+------+-------+-------+
+```
+#### Solution :- 
+Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio17.scala> <br>
+PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio17.py>
