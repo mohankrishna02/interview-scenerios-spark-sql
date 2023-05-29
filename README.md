@@ -466,3 +466,25 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio17.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio17.py>
+
+## Scenerio-18
+#### Input :- 
+```
++------------------+
+|              word|
++------------------+
+|The Social Dilemma|
++------------------+
+```
+
+#### Expected Output :- 
+```
++------------------+
+|      reverse word|
++------------------+
+|ehT laicoS ammeliD|
++------------------+
+```
+#### Solution :- 
+Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio18.scala> <br>
+PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio18.py>
