@@ -488,3 +488,78 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio18.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio18.py>
+
+## Scenerio-19 (Flatten the below complex dataframe)
+#### Input :- 
+```
+root
+ |-- code: long (nullable = true)
+ |-- commentCount: long (nullable = true)
+ |-- createdAt: string (nullable = true)
+ |-- description: string (nullable = true)
+ |-- feedsComment: string (nullable = true)
+ |-- id: long (nullable = true)
+ |-- imagePaths: string (nullable = true)
+ |-- images: string (nullable = true)
+ |-- isdeleted: boolean (nullable = true)
+ |-- lat: long (nullable = true)
+ |-- likeDislike: struct (nullable = true)
+ |    |-- dislikes: long (nullable = true)
+ |    |-- likes: long (nullable = true)
+ |    |-- userAction: long (nullable = true)
+ |-- lng: long (nullable = true)
+ |-- location: string (nullable = true)
+ |-- mediatype: long (nullable = true)
+ |-- msg: string (nullable = true)
+ |-- multiMedia: array (nullable = true)
+ |    |-- element: struct (containsNull = true)
+ |    |    |-- createAt: string (nullable = true)
+ |    |    |-- description: string (nullable = true)
+ |    |    |-- id: long (nullable = true)
+ |    |    |-- likeCount: long (nullable = true)
+ |    |    |-- mediatype: long (nullable = true)
+ |    |    |-- name: string (nullable = true)
+ |    |    |-- place: string (nullable = true)
+ |    |    |-- url: string (nullable = true)
+ |-- name: string (nullable = true)
+ |-- profilePicture: string (nullable = true)
+ |-- title: string (nullable = true)
+ |-- totalFeed: long (nullable = true)
+ |-- userId: long (nullable = true)
+ |-- videoUrl: string (nullable = true)
+```
+
+#### Expected Output :- 
+```
+root
+ |-- code: long (nullable = true)
+ |-- commentCount: long (nullable = true)
+ |-- createdAt: string (nullable = true)
+ |-- description: string (nullable = true)
+ |-- feedsComment: string (nullable = true)
+ |-- id: long (nullable = true)
+ |-- imagePaths: string (nullable = true)
+ |-- images: string (nullable = true)
+ |-- isdeleted: boolean (nullable = true)
+ |-- lat: long (nullable = true)
+ |-- lng: long (nullable = true)
+ |-- location: string (nullable = true)
+ |-- mediatype: long (nullable = true)
+ |-- msg: string (nullable = true)
+ |-- name: string (nullable = true)
+ |-- profilePicture: string (nullable = true)
+ |-- title: string (nullable = true)
+ |-- totalFeed: long (nullable = true)
+ |-- userId: long (nullable = true)
+ |-- videoUrl: string (nullable = true)
+ |-- dislikes: long (nullable = true)
+ |-- likes: long (nullable = true)
+ |-- userAction: long (nullable = true)
+ |-- createAt: string (nullable = true)
+ |-- likeCount: long (nullable = true)
+ |-- place: string (nullable = true)
+ |-- url: string (nullable = true)
+```
+#### Solution :- 
+Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio19.scala> <br>
+PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio19.py>
