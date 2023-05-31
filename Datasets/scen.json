@@ -1,0 +1,49 @@
+{
+  "code": 1234,
+  "commentCount": 5,
+  "createdAt": "2023-05-30T10:30:00",
+  "description": "Example description",
+  "feedsComment": "Example comment",
+  "id": 1,
+  "imagePaths": "/path/to/images",
+  "images": "image1.jpg,image2.jpg,image3.jpg",
+  "isdeleted": false,
+  "lat": 123456789,
+  "likeDislike": {
+    "dislikes": 10,
+    "likes": 20,
+    "userAction": 1
+  },
+  "lng": 987654321,
+  "location": "Example location",
+  "mediatype": 1,
+  "msg": "Example message",
+  "multiMedia": [
+    {
+      "createAt": "2023-05-30T12:00:00",
+      "description": "Media description",
+      "id": 1001,
+      "likeCount": 50,
+      "mediatype": 1,
+      "name": "Media name",
+      "place": "Media place",
+      "url": "https://example.com/media1"
+    },
+    {
+      "createAt": "2023-05-30T13:30:00",
+      "description": "Another media description",
+      "id": 1002,
+      "likeCount": 30,
+      "mediatype": 2,
+      "name": "Another media name",
+      "place": "Another media place",
+      "url": "https://example.com/media2"
+    }
+  ],
+  "name": "John Doe",
+  "profilePicture": "/path/to/profile_picture.jpg",
+  "title": "Example title",
+  "userId": 123,
+  "videoUrl": "https://example.com/video",
+  "totalFeed": 100
+}
