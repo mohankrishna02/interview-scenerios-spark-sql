@@ -640,3 +640,40 @@ root
 Dataset - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Datasets/scen20.json> <br>
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio20.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio20.py>
+
+## Scenerio-21 (The roundtrip distance should be calculated using spark or SQL.)
+#### Input :- 
+```
++----+---+----+
+|from| to|dist|
++----+---+----+
+| SEA| SF| 300|
+| CHI|SEA|2000|
+|  SF|SEA| 300|
+| SEA|CHI|2000|
+| SEA|LND| 500|
+| LND|SEA| 500|
+| LND|CHI|1000|
+| CHI|NDL| 180|
++----+---+----+
+```
+
+#### Expected Output :- 
+```
++----+---+----------+
+|from| to|total_dist|
++----+---+----------+
+| SEA| SF|       600|
+| CHI|SEA|      4000|
+|  SF|SEA|       600|
+| SEA|CHI|      4000|
+| SEA|LND|      1000|
+| LND|SEA|      1000|
++----+---+----------+
+
+```
+#### Solution :- 
+Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio21.scala> <br>
+PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio21.py>
+
+
