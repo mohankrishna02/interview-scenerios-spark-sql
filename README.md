@@ -660,16 +660,13 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 
 #### Expected Output :- 
 ```
-+----+---+----------+
-|from| to|total_dist|
-+----+---+----------+
-| SEA| SF|       600|
-| CHI|SEA|      4000|
-|  SF|SEA|       600|
-| SEA|CHI|      4000|
-| SEA|LND|      1000|
-| LND|SEA|      1000|
-+----+---+----------+
++----+---+--------------+
+|from| to|roundtrip_dist|
++----+---+--------------+
+| SEA| SF|           600|
+| CHI|SEA|          4000|
+| LND|SEA|          1000|
++----+---+--------------+
 
 ```
 #### Solution :- 
