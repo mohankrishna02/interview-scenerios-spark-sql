@@ -23,10 +23,16 @@ df.show()
 
 # Through SQL
 df.createOrReplaceTempView("trip")
-spark.sql(
-    "select a.from,a.to,(a.dist+b.dist) as total_dist from trip a join trip b on a.from=b.to and a.to=b.from").show()
+spark.sql("""SELECT r1.from, r1.to, (r1.dist + r2.dist) AS roundtrip_dist
+FROM trip r1
+JOIN trip r2 ON r1.from = r2.to AND r1.to = r2.from
+WHERE r1.from < r1.to
+""").show()
 
 # Through DSL
-finaldf = df.alias("a").join(df.alias("b"), (col("a.from") == col("b.to")) & (col("a.to") == col("b.from"))).select(
-    col("a.from"), col("a.to"), (col("a.dist") + col("b.dist")).alias("total_dist"))
+finaldf = df.alias("r1").join(df.alias("r2"),
+                              (col("r1.from") == col("r2.to")) & (col("r1.to") == col("r2.from"))).where(
+    col("r1.from") < col("r1.to")).select(col("r1.from"), col("r1.to"),
+                                          (col("r1.dist") + col("r2.dist")).alias("roundtrip_dist"))
+
 finaldf.show()
