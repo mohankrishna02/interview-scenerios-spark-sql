@@ -26,5 +26,8 @@ object Scenerio1 {
     spark.sql("select a.workerid,a.firstname,a.lastname,a.salary,a.joiningdate,a.depart from worktab a, worktab b where a.salary=b.salary and a.workerid !=b.workerid").show()
     //Through Spark DSL
     val finaldf = df.as("a").join(df.as("b"), $"a.salary" === $"b.salary" && $"a.workerid" =!= $"b.workerid").select($"a.workerid", $"a.firstname", $"a.lastname", $"a.salary", $"a.joiningdate", $"a.depart").show()
+    
+    //Another way 
+    val finaldf = df.as("a").join(df.as("b")).where(col("a.salary")===col("b.salary") && col("a.workerid") =!= col("b.workerid")).select($"a.workerid",$"a.firstname",$"a.lastname",$"a.salary",$"a.joiningdate",$"a.depart").show()
   }
 }
