@@ -673,4 +673,35 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio21.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio21.py>
 
+## Scenerio-22 (Cumilative sum)
+#### Input :- 
+```
++---+------+-----+
+|pid|  date|price|
++---+------+-----+
+|  1|26-May|  100|
+|  1|27-May|  200|
+|  1|28-May|  300|
+|  2|29-May|  400|
+|  3|30-May|  500|
+|  3|31-May|  600|
++---+------+-----+
+```
 
+#### Expected Output :- 
+```
++---+------+-----+---------+
+|pid|  date|price|new_price|
++---+------+-----+---------+
+|  1|26-May|  100|      100|
+|  1|27-May|  200|      300|
+|  1|28-May|  300|      600|
+|  2|29-May|  400|      400|
+|  3|30-May|  500|      500|
+|  3|31-May|  600|     1100|
++---+------+-----+---------+
+
+```
+#### Solution :- 
+Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio22.scala> <br>
+PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio22.py>
