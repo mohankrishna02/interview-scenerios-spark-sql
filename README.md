@@ -56,6 +56,8 @@
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/master/src/pack/Scenerio1.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/master/Scenerio-1.py>
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ### Scenerio-2 
 #### (Need the dates when the status gets changed like ordered to dispatched)
 #### Input :- 
@@ -88,6 +90,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/master/src/pack/Scenerio2.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/master/Scenerio2.py>
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ### Scenerio-3 
 #### Input :- 
 ```
@@ -117,6 +121,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio3.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio3.py>
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ### Scenerio-4 
 #### (Write a query to list the unique customer names in the custtab table, along with the number of addresses associated with each customer.)
 #### Input :- 
@@ -145,6 +151,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio4.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio4.py>
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ### Scenerio-5 
 * Read data from above file into dataframes(df1 and df2).
@@ -193,6 +201,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio5.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio5.py>
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ### Scenerio-6 
 #### (For Employee salary greater than 10000 give designation as manager else employee)
 #### Input :-
@@ -224,6 +234,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio6.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio6.py>
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ### Scenerio-7
 #### Input :- 
@@ -257,6 +269,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio7.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio7.py>
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ### Scenerio-8
 #### Input :- 
 ```
@@ -282,6 +296,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio8.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio8.py>
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ### Scenerio-9 
 #### (write spark code, list of name of participants who has rank=1 most number of times)
 #### Input :- 
@@ -302,6 +318,8 @@ c
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio9.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio9.py>
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ### Scenerio-10
 #### Input :- 
@@ -328,6 +346,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio10.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio10.py>
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ### Scenerio-11 
 #### (I have a table called Emp_table, it has 3 columns, Emp name, emp ID , salary
@@ -363,6 +383,8 @@ Grade C, write an SQL query)
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio11.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio11.py>
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ### Scenerio-12
 #### Input :- 
 ```
@@ -385,6 +407,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio12.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio12.py>
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ## Scenerio-13
 ####  (We have employee id,employee name, department. Need count of every department employees.)
@@ -418,6 +442,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio13.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio13.py>
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ## Scenerio-14 
 #### (We need total marks)
 #### Input :- 
@@ -440,11 +466,15 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio14.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio14.py>
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ## Scenerio-15 
 #### (Extend and Append list in  python and scala)
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio15.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio15.py>
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ## Scenerio-16 
 #### (Remove duplicates)
@@ -472,6 +502,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio16.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio16.py>
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ## Scenerio-17 
 #### (df1 contains Employeeid,Name,Age,State,Country columns df2 contains Employeeid,Name,Age,Address columns. how do you merge df1 and df2 to get the following output Employeeid,Name,Age,State,Country,Address)
@@ -505,6 +537,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio17.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio17.py>
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ## Scenerio-18
 #### Input :- 
 ```
@@ -526,6 +560,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio18.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio18.py>
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ## Scenerio-19 
 #### (Flatten the below complex dataframe)
@@ -604,6 +640,8 @@ Dataset - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio19.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio19.py>
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ## Scenerio-20 
 #### (Generate the complex dataframe)
 #### Input :- 
@@ -681,6 +719,8 @@ Dataset - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio20.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio20.py>
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ## Scenerio-21 
 #### (The roundtrip distance should be calculated using spark or SQL.)
 #### Input :- 
@@ -713,6 +753,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio21.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio21.py>
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ## Scenerio-22 
 #### (Cumilative sum)
@@ -747,3 +789,5 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio22.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio22.py>
+
+**[⬆ Back to Top](#table-of-contents)**
