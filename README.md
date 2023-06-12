@@ -1,5 +1,34 @@
 ## Spark and SQL Interview Scenerio Questions
-### Scenerio-1 (Query to get who are getting equal salary)
+
+### Table of Contents
+
+|No| Scenerios                                                                |
+|--|--------------------------------------------------------------------------|
+|1 |[Scenerio-1](#scenerio-1)                                                 |
+|2 |[Scenerio-2](#scenerio-2)                                                 |
+|3 |[Scenerio-3](#scenerio-3)                                                 |
+|4 |[Scenerio-4](#scenerio-4)                                                 |
+|5 |[Scenerio-5](#scenerio-5)                                                 |
+|6 |[Scenerio-6](#scenerio-6)                                                 |
+|7 |[Scenerio-7](#scenerio-7)                                                 |
+|8 |[Scenerio-8](#scenerio-8)                                                 |
+|9 |[Scenerio-9](#scenerio-9)                                                 |
+|10|[Scenerio-10](#scenerio-10)                                               |
+|11|[Scenerio-11](#scenerio-11)                                               |
+|12|[Scenerio-12](#scenerio-12)                                               |
+|13|[Scenerio-13](#scenerio-13)                                               |
+|14|[Scenerio-14](#scenerio-14)                                               |
+|15|[Scenerio-15](#scenerio-15)                                               |
+|16|[Scenerio-16](#scenerio-16)                                               |
+|17|[Scenerio-17](#scenerio-17)                                               |
+|18|[Scenerio-18](#scenerio-18)                                               |
+|19|[Scenerio-19](#scenerio-19)                                               |
+|20|[Scenerio-20](#scenerio-20)                                               |
+|21|[Scenerio-21](#scenerio-21)                                               |
+|22|[Scenerio-22](#scenerio-22)                                               |
+
+### Scenerio-1 
+#### Query to get who are getting equal salary
 #### Input :-
 ```
 +--------+---------+--------+------+-------------------+------+
@@ -27,7 +56,8 @@
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/master/src/pack/Scenerio1.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/master/Scenerio-1.py>
 
-### Scenerio-2 (Need the dates when the status gets changed like ordered to dispatched)
+### Scenerio-2 
+#### (Need the dates when the status gets changed like ordered to dispatched)
 #### Input :- 
 ```
 +-------+----------+----------+
@@ -87,7 +117,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio3.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio3.py>
 
-### Scenerio-4 (Write a query to list the unique customer names in the custtab table, along with the number of addresses associated with each customer.)
+### Scenerio-4 
+#### (Write a query to list the unique customer names in the custtab table, along with the number of addresses associated with each customer.)
 #### Input :- 
 ```
 +------+-----------+-------+
@@ -162,7 +193,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio5.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio5.py>
 
-### Scenerio-6 (For Employee salary greater than 10000 give designation as manager else employee)
+### Scenerio-6 
+#### (For Employee salary greater than 10000 give designation as manager else employee)
 #### Input :-
 ```
 +-----+----+------+
@@ -250,7 +282,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio8.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio8.py>
 
-### Scenerio-9 (write spark code, list of name of participants who has rank=1 most number of times)
+### Scenerio-9 
+#### (write spark code, list of name of participants who has rank=1 most number of times)
 #### Input :- 
 ```
 +----+---------------+
@@ -296,7 +329,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio10.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio10.py>
 
-### Scenerio-11 (I have a table called Emp_table, it has 3 columns, Emp name, emp ID , salary
+### Scenerio-11 
+#### (I have a table called Emp_table, it has 3 columns, Emp name, emp ID , salary
 in this I want to get salaries that are >10000 as Grade A, 5000-10000 as grade B and < 5000 as
 Grade C, write an SQL query)
 #### Input :- 
@@ -352,7 +386,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio12.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio12.py>
 
-## Scenerio-13 (We have employee id,employee name, department. Need count of every department employees.)
+## Scenerio-13
+####  (We have employee id,employee name, department. Need count of every department employees.)
 #### Input :- 
 ```
 +------+--------+-----------+
@@ -383,7 +418,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio13.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio13.py>
 
-## Scenerio-14 (We need total marks)
+## Scenerio-14 
+#### (We need total marks)
 #### Input :- 
 ```
 +------+------+------+-------+-----+-------+------+
@@ -404,13 +440,14 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio14.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio14.py>
 
-## Scenerio-15 (Extend and Append list in  python and scala)
-
+## Scenerio-15 
+#### (Extend and Append list in  python and scala)
 #### Solution :- 
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio15.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio15.py>
 
-## Scenerio-16 (Remove duplicates)
+## Scenerio-16 
+#### (Remove duplicates)
 #### Input :- 
 ```
 +---+----+-----------+------+
@@ -436,7 +473,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio16.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio16.py>
 
-## Scenerio-17 (df1 contains Employeeid,Name,Age,State,Country columns df2 contains Employeeid,Name,Age,Address columns. how do you merge df1 and df2 to get the following output Employeeid,Name,Age,State,Country,Address)
+## Scenerio-17 
+#### (df1 contains Employeeid,Name,Age,State,Country columns df2 contains Employeeid,Name,Age,Address columns. how do you merge df1 and df2 to get the following output Employeeid,Name,Age,State,Country,Address)
 #### Input :- 
 ```
 +------+-----+---+------+-------+          
@@ -489,7 +527,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio18.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio18.py>
 
-## Scenerio-19 (Flatten the below complex dataframe)
+## Scenerio-19 
+#### (Flatten the below complex dataframe)
 #### Input :- 
 ```
 root
@@ -565,7 +604,8 @@ Dataset - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio19.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio19.py>
 
-## Scenerio-20 (Generate the complex dataframe)
+## Scenerio-20 
+#### (Generate the complex dataframe)
 #### Input :- 
 ```
 root
@@ -641,7 +681,8 @@ Dataset - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio20.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio20.py>
 
-## Scenerio-21 (The roundtrip distance should be calculated using spark or SQL.)
+## Scenerio-21 
+#### (The roundtrip distance should be calculated using spark or SQL.)
 #### Input :- 
 ```
 +----+---+----+
@@ -673,7 +714,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio21.scala> <br>
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio21.py>
 
-## Scenerio-22 (Cumilative sum)
+## Scenerio-22 
+#### (Cumilative sum)
 #### Input :- 
 ```
 +---+------+-----+
