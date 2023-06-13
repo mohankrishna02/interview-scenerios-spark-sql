@@ -26,6 +26,8 @@
 |20|[Scenerio-20](#scenerio-20)                                               |
 |21|[Scenerio-21](#scenerio-21)                                               |
 |22|[Scenerio-22](#scenerio-22)                                               |
+|23|[Scenerio-23](#scenerio-23)                                               |
+|24|[Scenerio-24](#scenerio-24)                                               |
 
 ### Scenerio-1 
 #### Query to get who are getting equal salary
@@ -791,3 +793,80 @@ Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/b
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio22.py>
 
 **[⬆ Back to Top](#table-of-contents)**
+
+## Scenerio-23 
+#### Input :- 
+```
++-----------+-----------+
+|customer_id|product_key|
++-----------+-----------+
+|          1|          5|
+|          2|          6|
+|          3|          5|
+|          3|          6|
+|          1|          6|
++-----------+-----------+
+```
+```
++-----------+
+|product_key|
++-----------+
+|          5|
+|          6|
++-----------+
+
+```
+
+#### Expected Output :- 
+```
++-----------+
+|customer_id|
++-----------+
+|          1|
+|          3|
++-----------+
+
+```
+#### Solution :- 
+Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio23.scala> <br>
+PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio23.py>
+
+**[⬆ Back to Top](#table-of-contents)**
+
+## Scenerio-24 
+#### Input :- 
+```
++------+------------+
+|userid|        page|
++------+------------+
+|     1|        home|
+|     1|    products|
+|     1|    checkout|
+|     1|confirmation|
+|     2|        home|
+|     2|    products|
+|     2|        cart|
+|     2|    checkout|
+|     2|confirmation|
+|     2|        home|
+|     2|    products|
++------+------------+
+
+```
+
+#### Expected Output :- 
+```
++------+--------------------------------------------------------------+
+|userid|pages                                                         |
++------+--------------------------------------------------------------+
+|1     |[home, products, checkout, confirmation]                      |
+|2     |[home, products, cart, checkout, confirmation, home, products]|
++------+--------------------------------------------------------------+
+
+```
+#### Solution :- 
+Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio24.scala> <br>
+PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio24.py>
+
+**[⬆ Back to Top](#table-of-contents)**
+
