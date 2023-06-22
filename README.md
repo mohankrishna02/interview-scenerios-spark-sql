@@ -28,6 +28,7 @@
 |22|[Scenerio-22](#scenerio-22)                                               |
 |23|[Scenerio-23](#scenerio-23)                                               |
 |24|[Scenerio-24](#scenerio-24)                                               |
+|25|[Scenerio-25](#scenerio-25)                                               |
 
 ### Scenerio-1 
 #### Query to get who are getting equal salary
@@ -869,4 +870,48 @@ Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/b
 PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio24.py>
 
 **[⬆ Back to Top](#table-of-contents)**
+
+## Scenerio-25
+### consider a file with some bad/corrupt data as shown below.How will you handle those and load into spark dataframe 
+Note - avoid using filter after reading as DF and try to remove bad data while reading the file itself
+#### Input :- 
+```
+emp_no,emp_name,dep
+101,Murugan,HealthCare
+Invalid Entry,Description: Bad Record Entry
+102,Kannan,Finance
+103,Mani,IT
+Connection lost,Description: Poor Connection
+104,Pavan,HR
+Bad Record,Description:Corrupt Record
+```
+
+#### Expected Output :- 
+```
++------+--------+----------+
+|emp_no|emp_name|       dep|
++------+--------+----------+
+|   101| Murugan|HealthCare|
+|   102|  Kannan|   Finance|
+|   103|    Mani|        IT|
+|   104|   Pavan|        HR|
++------+--------+----------+
+
+```
+#### Solution :- 
+Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio25.scala> <br>
+PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio25.py>
+
+There are three modes available when reading a file in Spark:
+
+* `PERMISSIVE` : This is the default mode. It attempts to parse all the rows in the file, and if it encounters any malformed data or parsing errors, it sets the problematic fields to null and adds a new column called _corrupt_record to store the entire problematic row as a string.
+
+* `DROPMALFORMED` : This mode drops the rows that contain malformed data or cannot be parsed according to the specified schema. It only includes the rows that can be successfully parsed.
+
+* `FAILFAST` : This mode throws an exception and fails immediately if it encounters any malformed data or parsing errors in the file. It does not process any further rows after the first encountered error.
+
+You can specify the desired mode using the mode option when reading a file, such as option("mode", "PERMISSIVE") or option("mode", "FAILFAST"). If the mode option is not explicitly set, it defaults to PERMISSIVE.
+
+**[⬆ Back to Top](#table-of-contents)**
+
 
