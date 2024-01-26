@@ -946,6 +946,10 @@ You can specify the desired mode using the mode option when reading a file, such
 |  5|new in target|
 +---+-------------+
 ```
+#### Solution :-
+Scala-Spark :- <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio26.scala>
+
+**[⬆ Back to Top](#table-of-contents)**
 
 
 
