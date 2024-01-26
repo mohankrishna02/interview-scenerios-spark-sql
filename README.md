@@ -29,6 +29,7 @@
 |23|[Scenerio-23](#scenerio-23)                                               |
 |24|[Scenerio-24](#scenerio-24)                                               |
 |25|[Scenerio-25](#scenerio-25)                                               |
+|26|[Scenerio-26](#scenerio-26)                                               |
 
 ### Scenerio-1 
 #### Query to get who are getting equal salary
@@ -913,5 +914,38 @@ There are three modes available when reading a file in Spark:
 You can specify the desired mode using the mode option when reading a file, such as option("mode", "PERMISSIVE") or option("mode", "FAILFAST"). If the mode option is not explicitly set, it defaults to PERMISSIVE.
 
 **[⬆ Back to Top](#table-of-contents)**
+
+## Scenerio-26
+*Input :-
+```sh
++---+----+
+| id|name|
++---+----+
+|  1|   A|
+|  2|   B|
+|  3|   C|
+|  4|   D|
++---+----+
+
++---+-----+
+|id1|name1|
++---+-----+
+|  1|    A|
+|  2|    B|
+|  4|    X|
+|  5|    F|
++---+-----+
+```
+* Output :-
+```sh
++---+-------------+
+| id|      comment|
++---+-------------+
+|  3|new in source|
+|  4|     mismatch|
+|  5|new in target|
++---+-------------+
+```
+
 
 
