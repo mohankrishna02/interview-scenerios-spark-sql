@@ -35,7 +35,7 @@ object Scenerio26 {
        CASE
            WHEN s.name IS NULL THEN 'new in target'
            WHEN t.name1 IS NULL THEN 'new in source'
-           WHEN s.name != t.name1 THEN 'names are different'
+           WHEN s.name != t.name1 THEN 'mismatch'
        END AS comment
 FROM sourcetab s
 FULL OUTER JOIN targettab t ON s.id = t.id1
