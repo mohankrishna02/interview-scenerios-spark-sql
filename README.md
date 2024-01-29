@@ -947,7 +947,7 @@ You can specify the desired mode using the mode option when reading a file, such
 +---+-------------+
 ```
 #### Solution :-
-Scala-Spark :- <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio26.scala>
+Scala-Spark :- <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio26.scala> <br>
 PySpark :- <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio26.py>
 
 **[⬆ Back to Top](#table-of-contents)**
