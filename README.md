@@ -30,6 +30,8 @@
 |24|[Scenerio-24](#scenerio-24)                                               |
 |25|[Scenerio-25](#scenerio-25)                                               |
 |26|[Scenerio-26](#scenerio-26)                                               |
+|26|[Scenerio-27](#scenerio-27)                                               |
+|26|[Scenerio-28](#scenerio-28)                                               |
 
 ### Scenerio-1 
 #### Query to get who are getting equal salary
@@ -916,7 +918,7 @@ You can specify the desired mode using the mode option when reading a file, such
 **[⬆ Back to Top](#table-of-contents)**
 
 ## Scenerio-26
-*Input :-
+* Input :-
 ```sh
 +---+----+
 | id|name|
@@ -949,6 +951,75 @@ You can specify the desired mode using the mode option when reading a file, such
 #### Solution :-
 Scala-Spark :- <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio26.scala> <br>
 PySpark :- <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio26.py>
+
+**[⬆ Back to Top](#table-of-contents)**
+
+## Scenerio-27
+* Input :-
+```sh
++-----+------+----+
+|empid|salary|year|
++-----+------+----+
+|    1| 60000|2018|
+|    1| 70000|2019|
+|    1| 80000|2020|
+|    2| 60000|2018|
+|    2| 65000|2019|
+|    2| 65000|2020|
+|    3| 60000|2018|
+|    3| 65000|2019|
++-----+------+----+
+```
+* Output :-
+```sh
++-----+------+----+-----------+
+|empid|salary|year|incresalary|
++-----+------+----+-----------+
+|    1| 60000|2018|          0|
+|    1| 70000|2019|      10000|
+|    1| 80000|2020|      10000|
+|    2| 60000|2018|          0|
+|    2| 65000|2019|       5000|
+|    2| 65000|2020|          0|
+|    3| 60000|2018|          0|
+|    3| 65000|2019|       5000|
++-----+------+----+-----------+
+
+```
+#### Solution :-
+Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio27.scala) <br>
+PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio27.py)
+
+**[⬆ Back to Top](#table-of-contents)**
+
+
+## Scenerio-28
+* Input :-
+```sh
++-----+------+
+|child|parent|
++-----+------+
+|    A|    AA|
+|    B|    BB|
+|    C|    CC|
+|   AA|   AAA|
+|   BB|   BBB|
+|   CC|   CCC|
++-----+------+
+```
+* Output :-
+```sh
++-----+------+-----------+
+|child|parent|grandparent|
++-----+------+-----------+
+|    A|    AA|        AAA|
+|    C|    CC|        CCC|
+|    B|    BB|        BBB|
++-----+------+-----------+
+```
+#### Solution :-
+Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio28.scala) <br>
+PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio28.py)
 
 **[⬆ Back to Top](#table-of-contents)**
 
