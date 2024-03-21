@@ -30,8 +30,9 @@
 |24|[Scenerio-24](#scenerio-24)                                               |
 |25|[Scenerio-25](#scenerio-25)                                               |
 |26|[Scenerio-26](#scenerio-26)                                               |
-|26|[Scenerio-27](#scenerio-27)                                               |
-|26|[Scenerio-28](#scenerio-28)                                               |
+|27|[Scenerio-27](#scenerio-27)                                               |
+|28|[Scenerio-28](#scenerio-28)                                               |
+|29|[Scenerio-28](#scenerio-29)                                               |
 
 ### Scenerio-1 
 #### Query to get who are getting equal salary
@@ -1020,6 +1021,45 @@ PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-sp
 #### Solution :-
 Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio28.scala) <br>
 PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio28.py)
+
+**[⬆ Back to Top](#table-of-contents)**
+
+
+## Scenerio-29
+* Input :-
+```sh
++---+
+|col|
++---+
+|  1|
+|  2|
+|  3|
++---+
+
++----+
+|col1|
++----+
+|   1|
+|   2|
+|   3|
+|   4|
+|   5|
++----+
+```
+* Output :-
+```sh
++---+
+|col|
++---+
+|  1|
+|  2|
+|  4|
+|  5|
++---+
+```
+#### Solution :-
+Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio29.scala) <br>
+PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio29.py)
 
 **[⬆ Back to Top](#table-of-contents)**
 
