@@ -32,7 +32,8 @@
 |26|[Scenerio-26](#scenerio-26)                                               |
 |27|[Scenerio-27](#scenerio-27)                                               |
 |28|[Scenerio-28](#scenerio-28)                                               |
-|29|[Scenerio-28](#scenerio-29)                                               |
+|29|[Scenerio-29](#scenerio-29)                                               |
+|30|[Scenerio-30](#scenerio-30)                                               |
 
 ### Scenerio-1 
 #### Query to get who are getting equal salary
@@ -1062,6 +1063,46 @@ Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerio
 PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio29.py)
 
 **[⬆ Back to Top](#table-of-contents)**
+
+## Scenerio-30
+* Write a SQL Query to extract second most salary for each department 
+* Input :-
+```sh
++------+----+-------+-------+
+|emp_id|name|dept_id| salary|
++------+----+-------+-------+
+|     1|   A|      A|1000000|
+|     2|   B|      A|2500000|
+|     3|   C|      G| 500000|
+|     4|   D|      G| 800000|
+|     5|   E|      W|9000000|
+|     6|   F|      W|2000000|
++------+----+-------+-------+
+
++--------+---------+
+|dept_id1|dept_name|
++--------+---------+
+|       A|    AZURE|
+|       G|      GCP|
+|       W|      AWS|
++--------+---------+
+```
+* Output :-
+```sh
++------+----+---------+-------+
+|emp_id|name|dept_name| salary|
++------+----+---------+-------+
+|     1|   A|    AZURE|1000000|
+|     6|   F|      AWS|2000000|
+|     3|   C|      GCP| 500000|
++------+----+---------+-------+
+```
+#### Solution :-
+Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio30.scala) <br>
+PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio30.ipynb)
+
+**[⬆ Back to Top](#table-of-contents)**
+
 
 
 
