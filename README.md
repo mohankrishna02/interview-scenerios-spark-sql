@@ -1099,7 +1099,7 @@ PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-sp
 ```
 #### Solution :-
 Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio30.scala) <br>
-PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio30.ipynb)
+PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio30.ipynb) <br>
 SQL :- 
 ```sh
 WITH jointab AS (
