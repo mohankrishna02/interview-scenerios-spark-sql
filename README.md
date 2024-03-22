@@ -1100,7 +1100,16 @@ PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-sp
 #### Solution :-
 Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio30.scala) <br>
 PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio30.ipynb)
-
+SQL :- 
+```sh
+WITH jointab AS (
+    SELECT df1.emp_id, df1.name, df1.dept_id, df1.salary, df2.dept_name,
+           DENSE_RANK() OVER (PARTITION BY df1.dept_id ORDER BY df1.salary DESC) AS row_rank
+    FROM df1
+    INNER JOIN df2 ON df1.dept_id = df2.dept_id1
+)
+SELECT emp_id,name,dept_name,salary from jointab WHERE row_rank =2;
+```   
 **[⬆ Back to Top](#table-of-contents)**
 
 
