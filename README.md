@@ -34,6 +34,7 @@
 |28|[Scenerio-28](#scenerio-28)                                               |
 |29|[Scenerio-29](#scenerio-29)                                               |
 |30|[Scenerio-30](#scenerio-30)                                               |
+|31|[Scenerio-31](#scenerio-31)                                               |
 
 ### Scenerio-1 
 #### Query to get who are getting equal salary
@@ -1100,6 +1101,43 @@ PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-sp
 #### Solution :-
 Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio30.scala) <br>
 PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio30.ipynb) <br>
+SQL :- 
+```sh
+WITH jointab AS (
+    SELECT df1.emp_id, df1.name, df1.dept_id, df1.salary, df2.dept_name,
+           DENSE_RANK() OVER (PARTITION BY df1.dept_id ORDER BY df1.salary DESC) AS row_rank
+    FROM df1
+    INNER JOIN df2 ON df1.dept_id = df2.dept_id1
+)
+SELECT emp_id,name,dept_name,salary from jointab WHERE row_rank =2;
+```   
+**[⬆ Back to Top](#table-of-contents)**
+
+## Scenerio-31
+* Write a SQL Query to extract second most salary for each department 
+* Input :-
+```sh
++----+-----+--------+-----------+
+|col1| col2|    col3|       col4|
++----+-----+--------+-----------+
+|  m1|m1,m2|m1,m2,m3|m1,m2,m3,m4|
++----+-----+--------+-----------+
+```
+* Output :-
+```sh
++-----------+
+|        col|
++-----------+
+|         m1|
+|      m1,m2|
+|   m1,m2,m3|
+|m1,m2,m3,m4|
+|           |
++-----------+
+```
+#### Solution :-
+Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio31.scala) <br>
+PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio31.ipynb) <br>
 SQL :- 
 ```sh
 WITH jointab AS (
