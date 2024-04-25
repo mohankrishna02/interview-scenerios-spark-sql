@@ -1193,7 +1193,7 @@ SELECT emp_id,name,dept_name,salary from jointab WHERE row_rank =2;
 +-------+-------------------+------+---------------+
 ```
 #### Solution :-
-Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio32.scala) <br>
+Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio32%20Scala.scala) <br>
 PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio32.ipynb) <br>
 SQL :- 
 ```sh
