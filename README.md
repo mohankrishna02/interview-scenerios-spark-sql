@@ -35,6 +35,7 @@
 |29|[Scenerio-29](#scenerio-29)                                               |
 |30|[Scenerio-30](#scenerio-30)                                               |
 |31|[Scenerio-31](#scenerio-31)                                               |
+|32|[Scenerio-32](#scenerio-32)                                               |
 
 ### Scenerio-1 
 #### Query to get who are getting equal salary
@@ -1138,6 +1139,62 @@ SELECT emp_id,name,dept_name,salary from jointab WHERE row_rank =2;
 #### Solution :-
 Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio31.scala) <br>
 PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio31.ipynb) <br>
+SQL :- 
+```sh
+WITH jointab AS (
+    SELECT df1.emp_id, df1.name, df1.dept_id, df1.salary, df2.dept_name,
+           DENSE_RANK() OVER (PARTITION BY df1.dept_id ORDER BY df1.salary DESC) AS row_rank
+    FROM df1
+    INNER JOIN df2 ON df1.dept_id = df2.dept_id1
+)
+SELECT emp_id,name,dept_name,salary from jointab WHERE row_rank =2;
+```   
+**[⬆ Back to Top](#table-of-contents)**
+
+## Scenerio-32
+* Input :-
+```sh
++-------+-------------------+
+|food_id|          food_item|
++-------+-------------------+
+|      1|        Veg Biryani|
+|      2|     Veg Fried Rice|
+|      3|    Kaju Fried Rice|
+|      4|    Chicken Biryani|
+|      5|Chicken Dum Biryani|
+|      6|     Prawns Biryani|
+|      7|      Fish Birayani|
++-------+-------------------+
+
++-------+------+
+|food_id|rating|
++-------+------+
+|      1|     5|
+|      2|     3|
+|      3|     4|
+|      4|     4|
+|      5|     5|
+|      6|     4|
+|      7|     4|
++-------+------+
+```
+* Output :-
+```sh
++-------+-------------------+------+---------------+
+|food_id|          food_item|rating|stats(out of 5)|
++-------+-------------------+------+---------------+
+|      1|        Veg Biryani|     5|          *****|
+|      2|     Veg Fried Rice|     3|            ***|
+|      3|    Kaju Fried Rice|     4|           ****|
+|      4|    Chicken Biryani|     4|           ****|
+|      5|Chicken Dum Biryani|     5|          *****|
+|      6|     Prawns Biryani|     4|           ****|
+|      7|      Fish Birayani|     4|           ****|
++-------+-------------------+------+---------------+
+```
+#### Solution :-
+Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio32.scala) <br>
+PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio32.ipynb) <br>
 SQL :- 
 ```sh
 WITH jointab AS (
