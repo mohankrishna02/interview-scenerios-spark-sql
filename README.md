@@ -36,6 +36,7 @@
 |30|[Scenerio-30](#scenerio-30)                                               |
 |31|[Scenerio-31](#scenerio-31)                                               |
 |32|[Scenerio-32](#scenerio-32)                                               |
+|33|[Scenerio-33](#scenerio-33)                                               |
 
 ### Scenerio-1 
 #### Query to get who are getting equal salary
@@ -1206,6 +1207,49 @@ WITH jointab AS (
 SELECT emp_id,name,dept_name,salary from jointab WHERE row_rank =2;
 ```   
 **[⬆ Back to Top](#table-of-contents)**
+
+## Scenerio-33
+* Write a query to print the maximum number of discount tours any 1 family can choose.
+* Input :-
+```sh
++--------------------+--------------+-----------+
+|                  id|          name|family_size|
++--------------------+--------------+-----------+
+|c00dac11bde74750b...|   Alex Thomas|          9|
+|eb6f2d3426694667a...|    Chris Gray|          2|
+|3f7b5b8e835d4e1c8...| Emily Johnson|          4|
+|9a345b079d9f4d3ca...| Michael Brown|          6|
+|e0a5f57516024de2a...|Jessica Wilson|          3|
++--------------------+--------------+-----------+
+
++--------------------+------------+--------+--------+
+|                  id|        name|min_size|max_size|
++--------------------+------------+--------+--------+
+|023fd23615bd4ff4b...|     Bolivia|       2|       4|
+|be247f73de0f4b2d8...|Cook Islands|       4|       8|
+|3e85ab80a6f84ef3b...|      Brazil|       4|       7|
+|e571e164152c4f7c8...|   Australia|       5|       9|
+|f35a7bb7d44342f7a...|      Canada|       3|       5|
+|a1b5a4b5fc5f46f89...|       Japan|      10|      12|
++--------------------+------------+--------+--------+
+```
+* Output :-
+```sh
++-------------+-------------------+
+|         name|number_of_countries|
++-------------+-------------------+
+|Emily Johnson|                  4|
++-------------+-------------------+
+```
+#### Solution :-
+Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio33.scala) <br>
+PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio33.ipynb) <br>
+SQL :- 
+```sh
+
+```   
+**[⬆ Back to Top](#table-of-contents)**
+
 
 
 
