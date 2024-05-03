@@ -1246,7 +1246,7 @@ Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerio
 PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio33.ipynb) <br>
 SQL :- 
 ```sh
-
+select max(number_of_countries) from (select f.name,count(*) as number_of_countries from family f inner join country c on f.family_size  between c.min_size and c.max_size group by f.name);
 ```   
 **[⬆ Back to Top](#table-of-contents)**
 
