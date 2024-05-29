@@ -37,6 +37,7 @@
 |31|[Scenerio-31](#scenerio-31)                                               |
 |32|[Scenerio-32](#scenerio-32)                                               |
 |33|[Scenerio-33](#scenerio-33)                                               |
+|34|[Scenerio-34](#scenerio-34)                                               |
 
 ### Scenerio-1 
 #### Query to get who are getting equal salary
@@ -1249,6 +1250,43 @@ SQL :-
 select max(number_of_countries) from (select f.name,count(*) as number_of_countries from family f inner join country c on f.family_size  between c.min_size and c.max_size group by f.name);
 ```   
 **[⬆ Back to Top](#table-of-contents)**
+
+## Scenerio-34
+* Input :-
+```sh
++-----------+------+---+------+
+|customer_id|  name|age|gender|
++-----------+------+---+------+
+|          1| Alice| 25|     F|
+|          2|   Bob| 40|     M|
+|          3|   Raj| 46|     M|
+|          4| Sekar| 66|     M|
+|          5|  Jhon| 47|     M|
+|          6|Timoty| 28|     M|
+|          7|  Brad| 90|     M|
+|          8|  Rita| 34|     F|
++-----------+------+---+------+
+```
+* Output :-
+```sh
++---------+-----+
+|age_group|count|
++---------+-----+
+|    19-35|    3|
+|    36-50|    3|
+|      51+|    2|
++---------+-----+
+```
+#### Solution :-
+Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio33.scala) <br>
+PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio33.ipynb) <br>
+SQL :- 
+```sh
+select max(number_of_countries) from (select f.name,count(*) as number_of_countries from family f inner join country c on f.family_size  between c.min_size and c.max_size group by f.name);
+```   
+**[⬆ Back to Top](#table-of-contents)**
+
+
 
 
 
