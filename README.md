@@ -38,7 +38,7 @@
 |32|[Scenerio-32](#scenerio-32)                                               |
 |33|[Scenerio-33](#scenerio-33)                                               |
 |34|[Scenerio-34](#scenerio-34)                                               |
-|34|[Scenerio-35](#scenerio-35)                                               |
+|35|[Scenerio-35](#scenerio-35)                                               |
 
 ### Scenerio-1 
 #### Query to get who are getting equal salary
@@ -1293,7 +1293,6 @@ Question
 * Fill the null values with the mean age all of students
 * Filter the students who are 18 years above and older
 #### Solution :-
-Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio34.scala) <br>
 PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio35.ipynb) <br>
   
 **[⬆ Back to Top](#table-of-contents)**
