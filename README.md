@@ -38,6 +38,7 @@
 |32|[Scenerio-32](#scenerio-32)                                               |
 |33|[Scenerio-33](#scenerio-33)                                               |
 |34|[Scenerio-34](#scenerio-34)                                               |
+|34|[Scenerio-35](#scenerio-35)                                               |
 
 ### Scenerio-1 
 #### Query to get who are getting equal salary
@@ -1280,11 +1281,24 @@ select max(number_of_countries) from (select f.name,count(*) as number_of_countr
 #### Solution :-
 Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio34.scala) <br>
 PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio34.ipynb) <br>
-SQL :- 
-```sh
-select max(number_of_countries) from (select f.name,count(*) as number_of_countries from family f inner join country c on f.family_size  between c.min_size and c.max_size group by f.name);
-```   
+  
 **[⬆ Back to Top](#table-of-contents)**
+
+## Scenerio-35
+Question 
+* Create a new datafrane df1 with the given values
+* Count null entries in a datafarme
+* Remove null entries and the store the null entries in a new datafarme df2
+* Create a new dataframe df3 with the given values and join the two dataframes df1 & df2
+* Fill the null values with the mean age all of students
+* Filter the students who are 18 years above and older
+#### Solution :-
+Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio34.scala) <br>
+PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio35.ipynb) <br>
+  
+**[⬆ Back to Top](#table-of-contents)**
+
+
 
 
 
