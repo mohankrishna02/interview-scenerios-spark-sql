@@ -1284,8 +1284,8 @@ PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-sp
   
 **[⬆ Back to Top](#table-of-contents)**
 
-## Scenerio-35
-Question 
+## Scenerio-35 
+Question (IBM Question)
 * Create a new datafrane df1 with the given values
 * Count null entries in a datafarme
 * Remove null entries and the store the null entries in a new datafarme df2
@@ -1293,6 +1293,7 @@ Question
 * Fill the null values with the mean age all of students
 * Filter the students who are 18 years above and older
 #### Solution :-
+Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio35.scala) <br>
 PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio35.ipynb) <br>
   
 **[⬆ Back to Top](#table-of-contents)**
