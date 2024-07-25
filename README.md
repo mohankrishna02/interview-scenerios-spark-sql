@@ -995,7 +995,31 @@ PySpark :- <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob
 ```
 #### Solution :-
 Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio27.scala) <br>
-PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio27.py)
+PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio27.py) <br>
+SQL :-
+```
+select 
+  empid, 
+  salary, 
+  year, 
+  coalesce(
+    (salary - diff), 
+    0
+  ) as increment 
+from 
+  (
+    select 
+      *, 
+      lag(salary, 1) over (
+        partition by empid 
+        order by 
+          year
+      ) as diff 
+    from 
+      salarytab
+  );
+
+```
 
 **[⬆ Back to Top](#table-of-contents)**
 
