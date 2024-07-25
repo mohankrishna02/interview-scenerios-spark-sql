@@ -1118,7 +1118,6 @@ SELECT emp_id,name,dept_name,salary from jointab WHERE row_rank =2;
 **[⬆ Back to Top](#table-of-contents)**
 
 ## Scenerio-31
-* Write a SQL Query to extract second most salary for each department 
 * Input :-
 ```sh
 +----+-----+--------+-----------+
@@ -1144,13 +1143,20 @@ Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerio
 PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio31.ipynb) <br>
 SQL :- 
 ```sh
-WITH jointab AS (
-    SELECT df1.emp_id, df1.name, df1.dept_id, df1.salary, df2.dept_name,
-           DENSE_RANK() OVER (PARTITION BY df1.dept_id ORDER BY df1.salary DESC) AS row_rank
-    FROM df1
-    INNER JOIN df2 ON df1.dept_id = df2.dept_id1
-)
-SELECT emp_id,name,dept_name,salary from jointab WHERE row_rank =2;
+select 
+  explode(
+    split(col, '-')
+  ) 
+from 
+  (
+    select 
+      concat(
+        col1, '-', col2, '-', col3, '-', col4
+      ) as col 
+    from 
+      mtab
+  );
+
 ```   
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -1200,7 +1206,16 @@ Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerio
 PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio32.ipynb) <br>
 SQL :- 
 ```sh
-select foodtab.food_id,foodtab.food_item,ratingtab.rating,repeat('*',ratingtab.rating ) as stars from foodtab inner join ratingtab on foodtab.food_id = ratingtab.food_id order by foodtab.food_id;
+select 
+  foodtab.food_id, 
+  foodtab.food_item, 
+  ratingtab.rating, 
+  repeat('*', ratingtab.rating) as stars 
+from 
+  foodtab 
+  inner join ratingtab on foodtab.food_id = ratingtab.food_id 
+order by 
+  foodtab.food_id;
 ```   
 **[⬆ Back to Top](#table-of-contents)**
 
