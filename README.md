@@ -956,8 +956,29 @@ You can specify the desired mode using the mode option when reading a file, such
 +---+-------------+
 ```
 #### Solution :-
-Scala-Spark :- <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio26.scala> <br>
-PySpark :- <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio26.py>
+Scala-Spark :- [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio26.scala>) <br>
+PySpark :- [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio26.py>) <br>
+SQL :- 
+```
+select 
+  id, 
+  case when name != name1 then 'Mismatch' when name1 is null then 'New in Source' when name is null then 'New in Target' end as comment 
+from 
+  (
+    select 
+      coalesce(id, id1) as id, 
+      s.name, 
+      t.name1 
+    from 
+      sourcetab s full 
+      outer join targettab t on s.id = t.id1 
+    WHERE 
+      s.name != t.name1 
+      OR s.name IS NULL 
+      OR t.name1 IS NULL
+  );
+
+```
 
 **[⬆ Back to Top](#table-of-contents)**
 
