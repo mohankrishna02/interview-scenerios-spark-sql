@@ -764,8 +764,21 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 
 ```
 #### Solution :- 
-Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio21.scala> <br>
-PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio21.py>
+Scala-Spark - [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio21.scala>) <br>
+PySpark - [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio21.py>) <br>
+SQL - 
+```
+select 
+  r1.from, 
+  r1.to, 
+  (r1.dist + r2.dist) as round_distance 
+from 
+  trip r1 
+  join trip r2 on r1.from = r2.to 
+  and r1.to = r2.from 
+where 
+  r1.from < r1.to
+```
 
 **[⬆ Back to Top](#table-of-contents)**
 
