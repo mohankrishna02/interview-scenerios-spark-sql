@@ -876,9 +876,19 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 
 ```
 #### Solution :- 
-Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio24.scala> <br>
-PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio24.py>
+Scala-Spark - [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio24.scala>) <br>
+PySpark - [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio24.py>) <br>
+SQL :- 
+```
+select 
+  userid, 
+  collect_list(page) as pages 
+from 
+  testcol 
+group by 
+  userid;
 
+```
 **[⬆ Back to Top](#table-of-contents)**
 
 ## Scenerio-25
@@ -909,8 +919,8 @@ Bad Record,Description:Corrupt Record
 
 ```
 #### Solution :- 
-Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio25.scala> <br>
-PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio25.py>
+Scala-Spark - [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio25.scala>) <br>
+PySpark - [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio25.py>)
 
 There are three modes available when reading a file in Spark:
 
