@@ -800,8 +800,23 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 
 ```
 #### Solution :- 
-Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio22.scala> <br>
-PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio22.py>
+Scala-Spark - [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio22.scala>) <br>
+PySpark - [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio22.py>) <br>
+SQL - 
+```
+select 
+  pid, 
+  date, 
+  price, 
+  sum(price) over (
+    partition by pid 
+    order by 
+      price
+  ) as newprice 
+from 
+  ordertab
+
+```
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -839,8 +854,8 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 
 ```
 #### Solution :- 
-Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio23.scala> <br>
-PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio23.py>
+Scala-Spark - [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio23.scala>) <br>
+PySpark - [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio23.py>)
 
 **[⬆ Back to Top](#table-of-contents)**
 
