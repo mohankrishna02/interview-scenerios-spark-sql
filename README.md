@@ -476,8 +476,19 @@ PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/
 +------+------+------+-------+-----+-------+------+-----+
 ```
 #### Solution :- 
-Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio14.scala> <br>
-PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio14.py>
+Scala-Spark - [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio14.scala>) <br>
+PySpark - [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio14.py>) <br>
+SQL -
+```
+select 
+  *, 
+  (
+    telugu + english + maths + science + social
+  ) as total 
+from 
+  markstab
+
+```
 
 **[⬆ Back to Top](#table-of-contents)**
 
