@@ -131,8 +131,49 @@ PySpark - <https://github.com/mohankrishna02/interview-scenarios-spark-sql/blob/
 +--------+----------+------+
 ```
 #### Solution :- 
-Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio3.scala> <br>
-PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio3.py>
+Scala-Spark - [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio3.scala>) <br>
+PySpark - [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio3.py>) <br>
+SQL - 
+```
+SELECT sensorid,
+       timestamp,
+       ( newvalues - values ) AS values
+FROM  (SELECT *,
+              Lead(values, 1, 0)
+                OVER(
+                  partition BY sensorid
+                  ORDER BY values) AS newvalues
+       FROM   timetab)
+WHERE  newvalues != 0
+```
+Pandas - 
+```
+import pandas as pd
+
+data = [
+    (1111, "2021-01-15", 10),
+    (1111, "2021-01-16", 15),
+    (1111, "2021-01-17", 30),
+    (1112, "2021-01-15", 10),
+    (1112, "2021-01-15", 20),
+    (1112, "2021-01-15", 30),
+]
+
+df = pd.DataFrame(data, columns=["sensorid", "timestamp", "values"])
+print(df)
+
+df["newvalues"] = df.groupby("sensorid")["values"].shift(-1)
+print(df)
+
+df = df.dropna(subset=["newvalues"])
+print(df)
+
+df["values"] = df["newvalues"] - df["values"]
+print(df)
+
+df = df.drop(columns=["newvalues"])
+print(df)
+```
 
 **[⬆ Back to Top](#table-of-contents)**
 
