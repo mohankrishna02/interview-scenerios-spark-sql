@@ -203,8 +203,39 @@ print(df)
 +------+-----------+--------+
 ```
 #### Solution :- 
-Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio4.scala> <br>
-PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio4.py>
+Scala-Spark - [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio4.scala>) <br>
+PySpark - [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio4.py>) <br>
+SQL - 
+```
+SELECT custid,
+       custname,
+       Collect_set(address) AS address
+FROM   custtab
+GROUP  BY custid,
+          custname
+ORDER  BY custid 
+```
+Pandas - 
+```
+data = [
+    (1, "Mark Ray", "AB"),
+    (2, "Peter Smith", "CD"),
+    (1, "Mark Ray", "EF"),
+    (2, "Peter Smith", "GH"),
+    (2, "Peter Smith", "CD"),
+    (3, "Kate", "IJ"),
+]
+
+df = pd.DataFrame(data, columns=["custid", "custname", "address"])
+print(df)
+
+finaldf = (
+    df.groupby(["custid", "custname"])["address"]
+    .apply(lambda x: list(set(x)))
+    .reset_index()
+)
+print(finaldf)
+```
 
 **[⬆ Back to Top](#table-of-contents)**
 
