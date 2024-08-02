@@ -318,7 +318,6 @@ df3["salary"] = 1000
 print(df3)
 
 # append df2 and df3, and form df4
-print("==========df4================")
 df4 = pd.concat([df2, df3])
 
 df4 = df4.sort_values("id")
@@ -327,7 +326,6 @@ print(df4)
 # Remove records which have invalid email from df4, emails with @ are considered to be valid.
 finaldf = df4[df4["email"].str.contains("@", na=False)]
 print(finaldf)
-
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
