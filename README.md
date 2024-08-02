@@ -283,8 +283,52 @@ print(finaldf)
 +---+----+---+---------------+------+
 ```
 #### Solution :- 
-Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio5.scala> <br>
-PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio5.py>
+Scala-Spark - [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio5.scala>) <br>
+PySpark - [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio5.py>) <br>
+Pandas - 
+```
+import pandas as pd
+
+# Read data convert into dataframes(df1 and df2).
+data1 = [
+    (1, "abc", 31, "abc@gmail.com"),
+    (2, "def", 23, "defyahoo.com"),
+    (3, "xyz", 26, "xyz@gmail.com"),
+    (4, "qwe", 34, "qwegmail.com"),
+    (5, "iop", 24, "iop@gmail.com"),
+]
+
+df1 = pd.DataFrame(data1, columns=["id", "name", "age", "email"])
+print(df1)
+
+data2 = [
+    (11, "jkl", 22, "abc@gmail.com", 1000),
+    (12, "vbn", 33, "vbn@yahoo.com", 3000),
+    (13, "wer", 27, "wer", 2000),
+    (14, "zxc", 30, "zxc.com", 2000),
+    (15, "lkj", 29, "lkj@outlook.com", 2000),
+]
+
+df2 = pd.DataFrame(data2, columns=["id", "name", "age", "email", "salary"])
+print(df2)
+
+# Create a new dataframe df3 from df1, along with a new column salary, and keep it constant 1000
+df3 = df1.copy()
+df3["salary"] = 1000
+print(df3)
+
+# append df2 and df3, and form df4
+print("==========df4================")
+df4 = pd.concat([df2, df3])
+
+df4 = df4.sort_values("id")
+print(df4)
+
+# Remove records which have invalid email from df4, emails with @ are considered to be valid.
+finaldf = df4[df4["email"].str.contains("@", na=False)]
+print(finaldf)
+
+```
 
 **[⬆ Back to Top](#table-of-contents)**
 
