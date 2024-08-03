@@ -359,8 +359,42 @@ print(finaldf)
 +-----+----+------+-----------+
 ```
 #### Solution :- 
-Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio6.scala> <br>
-PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio6.py>
+Scala-Spark - [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio6.scala>) <br>
+PySpark - [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio6.py>) <br>
+SQL -
+```
+SELECT *,
+    CASE
+    WHEN salary > 10000 THEN
+    'Manager'
+    ELSE 'Employee'
+    END AS Designation
+FROM emptab
+```
+Pandas - 
+```
+import pandas as pd
+
+data = [
+    ("1", "a", 10000),
+    ("2", "b", 5000),
+    ("3", "c", 15000),
+    ("4", "d", 25000),
+    ("5", "e", 50000),
+    ("6", "f", 7000),
+]
+
+df = pd.DataFrame(data, columns=["empid", "name", "salary"])
+print(df)
+
+
+def emp_desgnination(salary):
+    return "Manager" if salary > 10000 else "Employee"
+
+
+df["Desgniation"] = df["salary"].apply(emp_desgnination)
+print(df)
+```
 
 **[⬆ Back to Top](#table-of-contents)**
 
