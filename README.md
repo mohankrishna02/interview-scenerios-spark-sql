@@ -427,8 +427,57 @@ print(df)
 +-------+----------+----+--------+-----+
 ```
 #### Solution :- 
-Scala-Spark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio7.scala> <br>
-PySpark - <https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio7.py>
+Scala-Spark - [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio7.scala>) <br>
+PySpark - [Click Here](<https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio7.py>) <br>
+SQL - 
+```
+SELECT 
+  * 
+FROM 
+  (
+    SELECT 
+      *, 
+      DENSE_RANK() OVER (
+        PARTITION BY year 
+        ORDER BY 
+          quantity DESC
+      ) AS rank 
+    FROM 
+      salestab
+  ) AS rankdf 
+WHERE 
+  rank = 1 
+ORDER BY 
+  sale_id
+```
+Pandas - 
+```
+import pandas as pd
+
+data = [
+    (1, 100, 2010, 25, 5000),
+    (2, 100, 2011, 16, 5000),
+    (3, 100, 2012, 8, 5000),
+    (4, 200, 2010, 10, 9000),
+    (5, 200, 2011, 15, 9000),
+    (6, 200, 2012, 20, 7000),
+    (7, 300, 2010, 20, 7000),
+    (8, 300, 2011, 18, 7000),
+    (9, 300, 2012, 20, 7000),
+]
+
+df = pd.DataFrame(data, columns=["sale_id", "product_id", "year", "quantity", "price"])
+print(df)
+
+df["rank"] = df.groupby("year")["quantity"].rank(method="dense", ascending=False)
+print(df)
+
+df = df[df["rank"] == 1]
+print(df)
+
+df = df.drop("rank", axis=1).sort_values("sale_id")
+print(df)
+```
 
 **[⬆ Back to Top](#table-of-contents)**
 
