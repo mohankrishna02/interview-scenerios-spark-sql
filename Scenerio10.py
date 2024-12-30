@@ -18,9 +18,13 @@ data = [
 df = spark.createDataFrame(data, ["empid", "commissionamt", "monthlastdate"])
 df.show()
 
-maxdatedf = df.groupBy(col("empid").alias("empid1")).agg(max("monthlastdate").alias("maxdate"))
-maxdatedf.show()
+df = spark.createDataFrame(data, ["empid", "commissionamt", "monthlastdate"])
+df.show()
 
-joindf = df.join(maxdatedf, (df["empid"] == maxdatedf["empid1"]) & (df["monthlastdate"] == maxdatedf["maxdate"]),
-                 "inner").drop("empid1", "maxdate")
-joindf.show()
+df =df.withColumn("date",to_date(df["monthlastdate"],"dd-MMM-yyyy"))
+df.show()
+
+win = Window.partitionBy("empid").orderBy(col("date").desc())
+df_wrk = df.withColumn("row_num",row_number().over(win))
+res_df = df_wrk.filter(col("row_num")==1).drop("row_number")
+res_df.show()
