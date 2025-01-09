@@ -39,6 +39,7 @@
 |33|[Scenerio-33](#scenerio-33)                                               |
 |34|[Scenerio-34](#scenerio-34)                                               |
 |35|[Scenerio-35](#scenerio-35)                                               |
+|36|[Scenerio-36](#scenerio-36)                                               |
 
 ### Scenerio-1 
 #### Query to get who are getting equal salary
@@ -1596,6 +1597,42 @@ Question (IBM Question)
 Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio35.scala) <br>
 PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio35.ipynb) <br>
   
+**[⬆ Back to Top](#table-of-contents)**
+
+
+## Scenerio-36
+* Input :-
+```sh
++----------+----------+
+| sell_date|   product|
++----------+----------+
+|2020-05-30| Headphone|
+|2020-06-01|    Pencil|
+|2020-06-02|      Mask|
+|2020-05-30|Basketball|
+|2020-06-01|      Book|
+|2020-06-02|      Mask|
+|2020-05-30|   T-Shirt|
++----------+----------+
+```
+* Output :-
+```sh
++----------+--------------------+---------+
+| sell_date|            products|null_sell|
++----------+--------------------+---------+
+|2020-05-30|[T-Shirt, Basketb...|        3|
+|2020-06-01|      [Pencil, Book]|        2|
+|2020-06-02|              [Mask]|        1|
++----------+--------------------+---------+
+```
+#### Solution :-
+Scala-Spark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/src/pack/Scenerio36.scala) <br>
+PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio36.ipynb) <br>
+
+SQL :- 
+```sh
+select sell_date,(collect_set(product)) as products,size(collect_set(product)) as num_sell from products group by sell_date;
+``` 
 **[⬆ Back to Top](#table-of-contents)**
 
 
