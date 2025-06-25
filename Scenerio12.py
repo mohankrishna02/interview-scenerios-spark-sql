@@ -11,7 +11,7 @@ spark = SparkSession.builder.getOrCreate()
 
 #creating UDF functions for masked data, here email[0] is it will take first letter i.e 0th index and email[8:] is it will take the string from 8th index position to end of the string
 def mask_email(email):
-    return (email[0] + "**********" + email[8:])
+    return (email[0] + "**********" + email[8])
 
 #creating UDF functions for masked data, here mobile[0:2] is it will take string from Index 0 to 2 letters and mobile[-3:] is it will take string last three index to end the end of the string
 def mask_mobile(mobile):
