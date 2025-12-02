@@ -31,3 +31,40 @@ result = df.filter(
     ))
 )
 result.show()
+#############################################################################################
+################solution 2 through DSL#######################################################
+
+myschema=["orderid","statusdate" ,"status"]
+df=spark.createDataFrame(data,schema=myschema)
+print("======RAW DATA============")
+df.show()
+
+w = Window.partitionBy("orderid").orderBy("statusdate")
+
+# Identify the first dispatched after Ordered
+df2 = df.withColumn(
+    "flag_start",
+    when(
+        (col("status") == "dispatched") &
+        (lag("status").over(w) == "Ordered"),
+        1
+    ).otherwise(0)
+)
+#Spark does not have a direct case when function like SQL.
+#Instead, when() + .otherwise() is the DSL equivalent of SQL CASE WHEN.
+
+# Create a running group id for dispatched streak after Ordered
+df3 = df2.withColumn(
+    "grp",
+    spark_sum("flag_start").over(w)
+)
+df3.show()
+
+# Filter only the group where grp >= 1 and status = dispatched
+result = df3.filter(
+    (col("grp") >= 1) &
+    (col("status") == "dispatched")
+).select("orderid", "statusdate", "status")
+
+result.show()
+
