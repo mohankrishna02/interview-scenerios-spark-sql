@@ -1,5 +1,7 @@
 ## Spark and SQL Interview Scenerio Questions
 
+Work through the scenarios below. For more runnable Spark and SQL interview problems, see [DataDriven](https://datadriven.io/pyspark-interview-questions).
+
 ### Table of Contents
 
 |No| Scenerios                                                                |
