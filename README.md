@@ -42,6 +42,7 @@
 |36|[Scenerio-36](#scenerio-36)                                               |
 |37|[Scenerio-37](#scenerio-37)                                               |
 |38|[Scenerio-38](#scenerio-38)                                               |
+|38|[Scenerio-39](#scenerio-39)                                               |
 
 
 ### Scenerio-1 
@@ -1703,7 +1704,52 @@ select emp_id,emp_name,department,salary from (select *, row_number() over(parti
 ``` 
 **[⬆ Back to Top](#table-of-contents)**
 
+## Scenerio-39
+### Find the second highest salary in each department..
+* Input :-
+```sh
+| transaction_id | customer_id | transaction_date | amount |
+| -------------: | ----------: | ---------------- | -----: |
+|              1 |         101 | 2024-01-01       |    100 |
+|              2 |         101 | 2024-01-03       |    200 |
+|              3 |         101 | 2024-01-05       |    300 |
+|              4 |         102 | 2024-01-02       |    150 |
+|              5 |         102 | 2024-01-06       |    250 |
+|              6 |         103 | 2024-01-04       |    500 |
+|              7 |         103 | 2024-01-08       |    100 |
 
+```
+* Output :-
+```sh
+| transaction_id | customer_id | transaction_date | amount | running_total |
+| -------------: | ----------: | ---------------- | -----: | ------------: |
+|              1 |         101 | 2024-01-01       |    100 |           100 |
+|              2 |         101 | 2024-01-03       |    200 |           300 |
+|              3 |         101 | 2024-01-05       |    300 |           600 |
+|              4 |         102 | 2024-01-02       |    150 |           150 |
+|              5 |         102 | 2024-01-06       |    250 |           400 |
+|              6 |         103 | 2024-01-04       |    500 |           500 |
+|              7 |         103 | 2024-01-08       |    100 |           600 |
+
+
+```
+#### Solution :-
+PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio39.ipynb) <br>
+
+SQL :- 
+```sh
+SELECT
+    transaction_id,
+    customer_id,
+    transaction_date,
+    amount,
+    SUM(amount) OVER (
+        PARTITION BY customer_id
+        ORDER BY transaction_date
+    ) AS running_total
+FROM transactions;
+``` 
+**[⬆ Back to Top](#table-of-contents)**
 
 
 
