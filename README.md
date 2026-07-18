@@ -40,6 +40,8 @@
 |34|[Scenerio-34](#scenerio-34)                                               |
 |35|[Scenerio-35](#scenerio-35)                                               |
 |36|[Scenerio-36](#scenerio-36)                                               |
+|37|[Scenerio-37](#scenerio-37)                                               |
+
 
 ### Scenerio-1 
 #### Query to get who are getting equal salary
@@ -1632,6 +1634,37 @@ PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-sp
 SQL :- 
 ```sh
 select sell_date,(collect_set(product)) as products,size(collect_set(product)) as num_sell from products group by sell_date;
+``` 
+**[⬆ Back to Top](#table-of-contents)**
+
+
+## Scenerio-37
+### Write a SQL query to find the latest order for each customer.
+* Input :-
+```sh
+| order_id | customer_id | order_date | amount |
+| -------- | ----------- | ---------- | ------ |
+| 1        | 101         | 2024-01-01 | 500    |
+| 2        | 102         | 2024-01-01 | 300    |
+| 3        | 101         | 2024-01-05 | 700    |
+| 4        | 103         | 2024-01-07 | 200    |
+| 5        | 102         | 2024-01-08 | 100    |
+| 6        | 101         | 2024-01-09 | 900    |
+```
+* Output :-
+```sh
+| customer_id | order_id | order_date | amount |
+| ----------- | -------- | ---------- | ------ |
+| 101         | 6        | 2024-01-09 | 900    |
+| 102         | 5        | 2024-01-08 | 100    |
+| 103         | 4        | 2024-01-07 | 200    |
+```
+#### Solution :-
+PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio37.ipynb) <br>
+
+SQL :- 
+```sh
+select order_id,customer_id,order_date,amount from (select *, row_number() over (partition by customer_id order by order_date desc) as rn from orders) t where rn = 1;
 ``` 
 **[⬆ Back to Top](#table-of-contents)**
 
