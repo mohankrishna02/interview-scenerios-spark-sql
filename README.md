@@ -41,6 +41,7 @@
 |35|[Scenerio-35](#scenerio-35)                                               |
 |36|[Scenerio-36](#scenerio-36)                                               |
 |37|[Scenerio-37](#scenerio-37)                                               |
+|38|[Scenerio-38](#scenerio-38)                                               |
 
 
 ### Scenerio-1 
@@ -1669,7 +1670,38 @@ select order_id,customer_id,order_date,amount from (select *, row_number() over 
 **[⬆ Back to Top](#table-of-contents)**
 
 
+## Scenerio-38
+### Find the second highest salary in each department..
+* Input :-
+```sh
+| emp_id | emp_name | department | salary |
+| ------ | -------- | ---------- | -----: |
+| 1      | John     | IT         |  80000 |
+| 2      | David    | IT         |  90000 |
+| 3      | Mike     | IT         |  75000 |
+| 4      | Sara     | HR         |  60000 |
+| 5      | Emma     | HR         |  65000 |
+| 6      | Tom      | Sales      |  70000 |
+| 7      | Chris    | Sales      |  85000 |
 
+```
+* Output :-
+```sh
+| department | emp_name | salary |
+| ---------- | -------- | -----: |
+| IT         | John     |  80000 |
+| HR         | Sara     |  60000 |
+| Sales      | Tom      |  70000 |
+
+```
+#### Solution :-
+PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio38.ipynb) <br>
+
+SQL :- 
+```sh
+select emp_id,emp_name,department,salary from (select *, row_number() over(partition by department order by salary desc) as rnk from employees) t where rnk = 2;
+``` 
+**[⬆ Back to Top](#table-of-contents)**
 
 
 
