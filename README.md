@@ -42,7 +42,8 @@
 |36|[Scenerio-36](#scenerio-36)                                               |
 |37|[Scenerio-37](#scenerio-37)                                               |
 |38|[Scenerio-38](#scenerio-38)                                               |
-|38|[Scenerio-39](#scenerio-39)                                               |
+|39|[Scenerio-39](#scenerio-39)                                               |
+|40|[Scenerio-39](#scenerio-40)                                               |
 
 
 ### Scenerio-1 
@@ -1748,6 +1749,42 @@ SELECT
         ORDER BY transaction_date
     ) AS running_total
 FROM transactions;
+``` 
+**[⬆ Back to Top](#table-of-contents)**
+
+
+## Scenerio-40
+### Identify active users who have logged in for at least 3 consecutive days.
+* Input :-
+```sh
+| login_id | user_id | login_date |
+| -------- | ------- | ---------- |
+| 1        | 101     | 2024-01-01 |
+| 2        | 101     | 2024-01-02 |
+| 3        | 101     | 2024-01-03 |
+| 4        | 101     | 2024-01-05 |
+| 5        | 102     | 2024-01-01 |
+| 6        | 102     | 2024-01-03 |
+| 7        | 102     | 2024-01-04 |
+| 8        | 103     | 2024-01-06 |
+| 9        | 103     | 2024-01-07 |
+| 10       | 103     | 2024-01-08 |
+
+```
+* Output :-
+```sh
+| user_id |
+| ------- |
+| 101     |
+| 103     |
+
+```
+#### Solution :-
+PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio40.ipynb) <br>
+
+SQL :- 
+```sh
+select user_id from (select *, date_sub(login_date, interval rk DAY) as days from (select *, row_number() over(partition by user_id order by login_date) as rk from login_details) as t) as c group by user_id,days having count(*)>=3;
 ``` 
 **[⬆ Back to Top](#table-of-contents)**
 
