@@ -44,6 +44,7 @@
 |38|[Scenerio-38](#scenerio-38)                                               |
 |39|[Scenerio-39](#scenerio-39)                                               |
 |40|[Scenerio-40](#scenerio-40)                                               |
+|40|[Scenerio-41](#scenerio-41)                                               |
 
 
 ### Scenerio-1 
@@ -1785,6 +1786,43 @@ PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-sp
 SQL :- 
 ```sh
 select user_id from (select *, date_sub(login_date, interval rk DAY) as days from (select *, row_number() over(partition by user_id order by login_date) as rk from login_details) as t) as c group by user_id,days having count(*)>=3;
+``` 
+**[⬆ Back to Top](#table-of-contents)**
+
+## Scenerio-41
+### A company receives customer records from multiple source systems. Sometimes the same customer appears multiple times with different updated_at timestamps. You need to keep only the latest record for each customer.
+* Input :-
+```sh
+| login_id | user_id | login_date |
+| -------- | ------- | ---------- |
+| 1        | 101     | 2024-01-01 |
+| 2        | 101     | 2024-01-02 |
+| 3        | 101     | 2024-01-03 |
+| 4        | 101     | 2024-01-05 |
+| 5        | 102     | 2024-01-01 |
+| 6        | 102     | 2024-01-03 |
+| 7        | 102     | 2024-01-04 |
+| 8        | 103     | 2024-01-06 |
+| 9        | 103     | 2024-01-07 |
+| 10       | 103     | 2024-01-08 |
+
+```
+* Output :-
+```sh
+| customer_id | customer_name | city    | updated_at          |
+| ----------: | ------------- | ------- | ------------------- |
+|         101 | John          | Austin  | 2024-01-05 09:00:00 |
+|         102 | David         | Boston  | 2024-01-06 15:00:00 |
+|         103 | Emma          | Seattle | 2024-01-03 08:00:00 |
+
+
+```
+#### Solution :-
+PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio41.ipynb) <br>
+
+SQL :- 
+```sh
+select customer_id,customer_name,city,updated_at from (select *, row_number() over(partition by customer_id order by updated_at desc) as rn from customer_updates) as t where rn = 1;
 ``` 
 **[⬆ Back to Top](#table-of-contents)**
 
