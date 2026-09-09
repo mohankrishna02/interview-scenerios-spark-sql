@@ -44,7 +44,8 @@
 |38|[Scenerio-38](#scenerio-38)                                               |
 |39|[Scenerio-39](#scenerio-39)                                               |
 |40|[Scenerio-40](#scenerio-40)                                               |
-|40|[Scenerio-41](#scenerio-41)                                               |
+|41|[Scenerio-41](#scenerio-41)                                               |
+|42|[Scenerio-42](#scenerio-42)                                               |
 
 
 ### Scenerio-1 
@@ -1823,6 +1824,43 @@ PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-sp
 SQL :- 
 ```sh
 select customer_id,customer_name,city,updated_at from (select *, row_number() over(partition by customer_id order by updated_at desc) as rn from customer_updates) as t where rn = 1;
+``` 
+**[⬆ Back to Top](#table-of-contents)**
+
+## Scenerio-42
+### In a production pipeline, because of retries/reprocessing, the same transaction may be loaded multiple times. Your task is to identify the duplicate transaction IDs and how many times each appears.
+
+* Input :-
+
+```sh
+| transaction_id | customer_id | amount | transaction_date |
+| -------------: | ----------: | -----: | ---------------- |
+|           1001 |         101 |    500 | 2024-01-01       |
+|           1002 |         102 |    300 | 2024-01-02       |
+|           1001 |         101 |    500 | 2024-01-01       |
+|           1003 |         103 |    700 | 2024-01-03       |
+|           1004 |         104 |    200 | 2024-01-04       |
+|           1002 |         102 |    300 | 2024-01-02       |
+|           1002 |         102 |    300 | 2024-01-02       |
+|           1005 |         105 |    900 | 2024-01-05       |
+
+```
+* Output :-
+
+```sh
+| transaction_id | occurrence_count |
+| -------------: | ---------------: |
+|           1001 |                2 |
+|           1002 |                3 |
+
+
+```
+#### Solution :-
+PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio42.ipynb) <br>
+
+SQL :- 
+```sh
+select * from (select transaction_id, count(*) as occurence_count from payment_transactions group by transaction_id) as t where occurence_count >1;
 ``` 
 **[⬆ Back to Top](#table-of-contents)**
 
