@@ -46,6 +46,7 @@
 |40|[Scenerio-40](#scenerio-40)                                               |
 |41|[Scenerio-41](#scenerio-41)                                               |
 |42|[Scenerio-42](#scenerio-42)                                               |
+|43|[Scenerio-43](#scenerio-43)                                               |
 
 
 ### Scenerio-1 
@@ -1861,6 +1862,61 @@ PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-sp
 SQL :- 
 ```sh
 select * from (select transaction_id, count(*) as occurence_count from payment_transactions group by transaction_id) as t where occurence_count >1;
+``` 
+**[⬆ Back to Top](#table-of-contents)**
+
+
+## Scenerio-43
+### The business team wants to identify customers who registered on the platform but have never placed an order.
+You have two tables: customers and orders.
+
+* Input :-
+
+customers table
+
+```sh
+customer_id	customer_name
+101	         John
+102	         David
+103	         Emma
+104	         Sara
+105	         Mike
+106	         Chris
+
+```
+
+orders table
+
+```sh
+order_id	customer_id	order_amount
+1	          101	        500
+2	          102	        300
+3	          101	        700
+4	          104	        200
+5	          106	        900
+```
+
+
+* Output :-
+
+```sh
+customer_id	customer_name
+103	         Emma
+105	         Mike
+
+
+```
+#### Solution :-
+PySpark :- [Click Here](https://github.com/mohankrishna02/interview-scenerios-spark-sql/blob/master/Scenerio43.ipynb) <br>
+
+SQL :- 
+```sh
+SELECT c.customer_id,
+       c.customer_name
+FROM customers c
+LEFT JOIN orders o
+    ON c.customer_id = o.customer_id
+WHERE o.order_id IS NULL;
 ``` 
 **[⬆ Back to Top](#table-of-contents)**
 
